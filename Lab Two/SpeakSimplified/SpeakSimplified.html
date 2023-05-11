@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Document</title>
+    <style>
+          * {
+            font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+            margin: 10px;
+            background-color: black;
+            color: bisque;
+        }
+
+        input {
+            border-radius: 10px;
+            padding: 5px;
+        }
+    </style>
 </head>
 <body>
-    <input id="input" type="text">
+    <input id="input" type="text" placeholder="Enter the word">
     <input type="button" onclick="addPrefix('un')" id="exclusion" value="exclusion">
     <input type="button" onclick="addPrefix('plus')" id="strengthen" value="strengthen">
     <input type="button" onclick="addPrefix('double')" id="emphasize" value="emphasize">

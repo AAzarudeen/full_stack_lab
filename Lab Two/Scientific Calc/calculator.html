@@ -1,7 +1,6 @@
 <html>
 <head>
     <title>Calculator</title>
-    <script src="https://unpkg.com/mathjs/lib/browser/math.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,7 +13,6 @@
             <p onclick="tan_fun()" class="grid-item">tan</p>
             <p onclick="round_fun()" class="grid-item">round</p>
             <p onclick="log_fun()" class="grid-item">log</p>
-            <p onclick="log_ten_fun()" class="grid-item">log10</p>
             <p onclick="abs_fun()" class="grid-item">abs</p>
             <p onclick="fact_fun()" class="grid-item">n!</p>
             <p onclick="all_clear()" class="grid-item" id="ac">AC</p>
@@ -29,16 +27,20 @@
             <p onclick="input_fun(2)" class="grid-item" id="2">2</p>
             <p onclick="input_fun(1)" class="grid-item" id="1">1</p>
             <p onclick="input_fun(0)" class="grid-item" id="zero">0</p>
-            <p onclick="input_fun('00')" class="grid-item">00</p>
             <p onclick="input_fun('-')" class="grid-item" id="minus">-</p>
             <p onclick="input_fun('.')" class="grid-item" id="dot">.</p>
-            <p onclick="evaluate_ex()" class="grid-item" id="equal">=</p>
         </div>
     </div>
     <script>
         const input_box = document.getElementById("input_box")
 
 function input_fun(number) {
+    if ((input_box.textContent[0] == 0 && number == 0) || number == "00") {
+        return
+    }
+    if ((input_box.textContent == 0 && number != 0) || input_box.textContent === NaN) {
+        all_clear()
+    }
     input_box.textContent += number
 }
 
@@ -50,30 +52,23 @@ function back_space() {
     input_box.textContent = input_box.textContent.slice(0,-1)
 }
 
-function evaluate_ex() {
-    input_box.textContent = math.evaluate(input_box.textContent)
-}
-
 function sin_fun(){
-    input_box.textContent = math.sin(input_box.textContent).toFixed(2)
+    input_box.textContent = Math.sin(input_box.textContent).toFixed(2)
 }
 function cos_fun(){
-    input_box.textContent = math.cos(input_box.textContent).toFixed(2)
+    input_box.textContent = Math.cos(input_box.textContent).toFixed(2)
 }
 function tan_fun(){
-    input_box.textContent = math.tan(input_box.textContent).toFixed(2)
+    input_box.textContent = Math.tan(input_box.textContent).toFixed(2)
 }
 function round_fun(){
-    input_box.textContent = math.round(input_box.textContent)
+    input_box.textContent = Math.round(input_box.textContent)
 }
 function log_fun(){
-    input_box.textContent = math.log(input_box.textContent).toFixed(2)
-}
-function log_ten_fun(){
-    input_box.textContent = math.log(input_box.textContent).toFixed(2)
+    input_box.textContent = Math.log(input_box.textContent).toFixed(2)
 }
 function abs_fun(){
-    input_box.textContent = math.abs(input_box.textContent)
+    input_box.textContent = Math.abs(input_box.textContent)
 }
 function fact_fun(){
     var num = input_box.textContent

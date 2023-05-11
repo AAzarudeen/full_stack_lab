@@ -46,9 +46,7 @@
     <table>
         <tr><th>Description</th><th>price</th><tr>
         <tr><td>Consumed Units:</td><td id="units_consumed">0</td></tr>
-        <tr><td>Total Current Charges Rs.</td><td class="units_charge">0</td></tr>
         <tr><td>Current Charges Rs.</td><td class="units_charge">0</td></tr>
-        <tr><td>Fixed Cost Rs.(+)</td><td>50</td></tr>
         <tr><td>New Subsidy Rs.(-)</td><td>250</td></tr>
         <tr><td>Net Amount Rs. </td><td id="net_amount">0</td></tr>
     </table>
@@ -67,19 +65,19 @@
             }
             if (units_inp.value >= 101 && units_inp.value <= 200) {
                 units_char = units_inp.value*3.75
-                amount = (100+(units_char)+50)-250
+                amount = (100+units_char)-250
             }
             if (units_inp.value >= 201 && units_inp.value <= 400) {
                 units_char = units_inp.value*4
-                amount = (250+(units_char)+50)-250
+                amount = (250+units_char)-250
             }
             if (units_inp.value >= 401 && units_inp.value <= 600) {
                 units_char = units_inp.value*4.25
-                amount = (300+(units_char)+50)-250
+                amount = (300+units_char)-250
             }
             if (units_inp.value >= 600) {
                 units_char = units_inp.value*5
-                amount = (400+(units_char)+50)-250
+                amount = (400+units_char)-250
             }
             net_amount.innerText = amount
             for (let index = 0; index < units_charge.length; index++) {
