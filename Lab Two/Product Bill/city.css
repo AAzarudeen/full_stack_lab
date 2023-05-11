@@ -1,0 +1,50 @@
+/* Apply a margin and padding to the form */
+form {
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  /* Style the label elements */
+  label {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  /* Style the select element */
+  select {
+    display: block;
+    margin-bottom: 20px;
+    padding: 5px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Style the input elements */
+  input {
+    display: block;
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Style the submit button */
+  button[type="submit"] {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* Change the submit button color on hover */
+  button[type="submit"]:hover {
+    background-color: #0062cc;
+  }
+  
+
+  table, th, td {
+    border:1px solid black;
+  }

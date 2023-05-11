@@ -1,0 +1,17 @@
+body{
+    background-image: url('./res/piz.jpg');
+    margin-left: 20px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    color: white;
+}
+#title{
+    font-size: 30px;
+    text-align: center;
+}
+.sub-title{
+    font-size: 20px;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        #image-container{
+            display: grid;
+            grid-template-columns: 100px 100px 100px 100px 100px;
+            grid-gap: 30px;
+            margin: auto;
+            align-items: center;
+            justify-content: center;
+        }
+        .grid-item{
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="image-container">
+        <img id="0" class="grid-item">
+        <img id="1" class="grid-item">
+        <img id="2" class="grid-item">
+        <img id="3" class="grid-item">
+        <img id="4" class="grid-item">
+    </div>
+    <script>
+        var colors = ["blue.png","brown.png","red.jpg","skin_color.png","yellow.png"]
+        const imgs = document.querySelectorAll(".grid-item")
+
+        function setUpSrc(){
+            for(let i = 0; i < colors.length;i++){
+                imgs[i].src = colors[i]
+            }
+        }
+
+        for(let i = 0; i < colors.length;i++){
+            imgs[i].addEventListener("click",(e)=>{
+                var next = parseInt(e.target.id)+1
+                if(e.target.id == 4){
+                    next = 0
+                }
+                var temp = colors[e.target.id]
+                colors[e.target.id] = colors[next]
+                colors[next] = temp
+                setUpSrc()
+            })
+        }
+
+        setUpSrc()
+
+    </script>
+</body>
+</html>

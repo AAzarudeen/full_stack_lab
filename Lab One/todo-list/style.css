@@ -1,0 +1,19 @@
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#title{
+    color: blue;
+}
+
+.add_div{
+    width: 100%;
+   display: inline; 
+   justify-content: space-between;
+}
+
+#add_task{
+    flex-grow: 1;
+
+    background-color: black;
+}

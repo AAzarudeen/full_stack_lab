@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <h1 class="headings">Super Computers</h1>
+      <p class="headings">No.12 Kumaran Street,Trichy</p>
+    </center>
+    <div id="list"></div>
+    <script>
+      const store = document.getElementById("list");
+
+      let parts = [
+        ["Monitors","Motherboards","Chips","Hard Drives","DVD-ROMs","Cases","Power Supplies",],
+        ["LCD Screens", "LED Screens", "Vibrant Colors"],
+        ["Fast"],
+        ["i9", "i7", "i5", "i3", "Core2Duo", "Pentium", "Very Fast"],
+        ["2TB", "1TB", "100-500 GB", "Fast Reading"],
+        ["Burn CDs", "Burn DVDs"],
+        ["ATX", "AT", "Mini", "Other Sizes", "Choice of Colors"],
+        ["we can get one for any computer"],
+      ];
+      for (let i = 0; i < parts[0].length; i++) {
+        const partname = document.createElement('h4')
+        partname.append(document.createTextNode(`${parts[0][i]} : `))
+        const ulist = document.createElement('ul')
+        for(let j = 0;j < parts[i+1].length;j++){
+          if (j == parts[i+1].length-1) {
+            partname.append(document.createTextNode(` ${parts[i+1][j]}.`))  
+            continue
+          }
+          partname.append(document.createTextNode(` ${parts[i+1][j]},`))
+        }
+        store.appendChild(partname)
+      }
+    </script>
+  </body>
+</html>

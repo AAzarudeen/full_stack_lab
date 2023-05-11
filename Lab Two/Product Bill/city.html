@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <center><h1>Delivery</h1></center>
+    <center><div class="container">
+            <select name="cities" id="cities" onchange="generate_input()">
+                <option value="chennai">chennai</option>
+                <option value="coimbatore">coimbatore</option>
+                <option value="madurai">madurai</option>
+                <option value="salem">salem</option>
+                <option value="tiruchy">tiruchy</option>
+                <option value="thoothukudi">thoothukudi</option>
+            </select>
+        <div id="input_container"></div>
+    </div>
+</center>
+    <script>
+        const cities = document.getElementById("cities")
+const input_container = document.getElementById("input_container")
+let city = {
+    "chennai":15,
+    "coimbatore":12,
+    "madurai":12,
+    "salem":8,
+    "tiruchy":6,
+    "thoothukudi":2
+}
+let c = ""
+function generate_input(){
+    c = cities.value
+    let inp = ""
+    for(let i = 1;i <= city[c];i++){
+        inp += `<input id = 'number${i}' placeholder = 'enter item ${i}'><br>`
+    }
+    input_container.innerHTML = inp;
+}
+    </script>
+
+</body>
+
+</html>

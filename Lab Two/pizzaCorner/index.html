@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pizza Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <p id="title">Pizza Calculator</p>
+    <div class="crust">
+        <p class="sub-title">Choose Crust</p>
+        <input id="small" type="radio" name="crust" checked>
+        <label for="small">Small Rs. 99</label>
+        <input type="radio" name="crust" id="medium">
+        <label for="medium">Medium Rs. 199</label>
+        <input type="radio" name="crust" id="large">
+        <label for="large">Large Rs. 399</label>
+    </div>
+        <input type="checkbox" name="deep_pan" id="deep_pan">
+        <label for="deep_pan">For deep pan, add ₹20</label><br>
+        <p class="sub-title">Extra Toppings:</p>
+        <ul>
+            <li><input type="checkbox" name="mus" id="mus"><label for="mus">mushrooms: add ₹15</label></li>
+            <li><input type="checkbox" name="oli" id="oli"><label for="oli">olives: add ₹10</label></li>
+            <li><input type="checkbox" name="finger" id="finger"><label for="finger">fingernail: add ₹30</label></li>
+            <li><input type="checkbox" name="beef" id="beef"><label for="beef">spicy beef: add ₹20</label></li>
+        </ul>
+        <input type="checkbox" name="home_del" id="home_del">
+        <label for="home_del">home delivery, add Rs. 25</label>
+    <p>Total : <span id="amount"></span></p>
+    <script src="app.js"></script>
+</body>
+</html>

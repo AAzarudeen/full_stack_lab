@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-color: blanchedalmond;
+            font-family: "Mukta";
+            font-weight: 100;
+        }
+        th,td{
+            text-align: left;
+            padding: 5px;
+        }
+        table{
+            margin: auto;
+            margin-top: 10px;
+            width: 50%;
+        }
+        .title{
+            text-align: center;
+            font-family: "Mukta";
+            font-weight: 100;
+            font-size: 50px;
+        }
+        #units,#calculate_btn{
+            display: block;
+            margin: auto;
+            font-size: x-large;
+        }
+        #total{
+            margin-left: 30px;
+            font-size: larger;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="title">Bill Calculator</h1>
+    <input id="units" type="number" placeholder="Enter the units" onkeyup="calculate()">
+    <br>
+    <!-- <button id="calculate_btn" onclick="calculate()">Calculate</button> -->
+    <table>
+        <tr><th>Description</th><th>price</th><tr>
+        <tr><td>Consumed Units:</td><td id="units_consumed">0</td></tr>
+        <tr><td>Total Current Charges Rs.</td><td class="units_charge">0</td></tr>
+        <tr><td>Current Charges Rs.</td><td class="units_charge">0</td></tr>
+        <tr><td>Fixed Cost Rs.(+)</td><td>50</td></tr>
+        <tr><td>New Subsidy Rs.(-)</td><td>250</td></tr>
+        <tr><td>Net Amount Rs. </td><td id="net_amount">0</td></tr>
+    </table>
+    <script>
+        const units_inp = document.getElementById('units')
+        const units_consumed = document.getElementById('units_consumed')
+        const units_charge = document.getElementsByClassName('units_charge')
+        const net_amount = document.getElementById('net_amount')
+        console.log(units_charge)
+        function calculate() {
+            var units_char = 0
+            var amount = 0
+            units_consumed.innerText = units_inp.value
+            if (units_inp.value <= 100) {
+                amount = 0
+            }
+            if (units_inp.value >= 101 && units_inp.value <= 200) {
+                units_char = units_inp.value*3.75
+                amount = (100+(units_char)+50)-250
+            }
+            if (units_inp.value >= 201 && units_inp.value <= 400) {
+                units_char = units_inp.value*4
+                amount = (250+(units_char)+50)-250
+            }
+            if (units_inp.value >= 401 && units_inp.value <= 600) {
+                units_char = units_inp.value*4.25
+                amount = (300+(units_char)+50)-250
+            }
+            if (units_inp.value >= 600) {
+                units_char = units_inp.value*5
+                amount = (400+(units_char)+50)-250
+            }
+            net_amount.innerText = amount
+            for (let index = 0; index < units_charge.length; index++) {
+                units_charge[index].innerText = units_char
+                
+            }
+        }
+    </script>
+</body>
+</html>
