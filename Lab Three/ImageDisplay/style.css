@@ -1,0 +1,75 @@
+*{
+    font-family: 'Raleway';
+}
+
+#title{
+    text-align: center;
+    width: 100%;
+}
+
+#image{
+    width:250px;
+    height:250px;
+    border: 0px;
+    border-radius: 100%;
+    background-color: black;
+}
+
+#chooser{
+    display: none;    
+}
+
+#chooser-label{
+    background-color: black;
+    padding: 20px;
+    color: white;
+    border-radius: 30px;
+    width: 250px;
+    font-size: large;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#image-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.details{
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 30px;
+    width: 250px;
+    font-size: large;
+    font-weight: 800;
+}
+
+#add-btn{
+    background-color: black;
+    padding: 10px;
+    color: white;
+    border-radius: 30px;
+    width: 250px;
+    font-size: large;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#details-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+table{
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
+    border-spacing: 10px;
+}
+th,td{
+    background-color: blue;
+}
