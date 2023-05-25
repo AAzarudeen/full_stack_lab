@@ -3,6 +3,9 @@
 <head>
     <title>Document</title>
     <style>
+        *{
+            background-color: bisque;
+        }
         #image-container{
             display: grid;
             grid-template-columns: 100px 100px 100px 100px 100px;
@@ -15,6 +18,10 @@
             width: 100px;
             height: 100px;
             margin: 20px;
+            border-radius: 30px;
+            border-color: black;
+            border-width: 3px;
+            border-style: solid;
         }
     </style>
 </head>
@@ -38,11 +45,10 @@
 
         for(let i = 0; i < colors.length;i++){
             imgs[i].addEventListener("click",(e)=>{
-                // console.log(e.target.id)
-                colors = colors.slice(parseInt(e.target.id),1)
-                // colors.push(temp)
-                // console.log(temp)
-                // console.log(colors)
+                for(let c = e.target.id;c < colors.length;c++){
+                    colors.unshift(colors.pop())
+                    console.log(colors)
+                }
                 setUpSrc()
             })
         }

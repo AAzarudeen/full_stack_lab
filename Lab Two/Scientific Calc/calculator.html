@@ -41,6 +41,8 @@ function input_fun(number) {
     if ((input_box.textContent == 0 && number != 0) || input_box.textContent === NaN) {
         all_clear()
     }
+    if((input_box.textContent == "" && number == '.') || (input_box.textContent[input_box.textContent.length-1] == '.' && number == '.'))
+        return
     input_box.textContent += number
 }
 
