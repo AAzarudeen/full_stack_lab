@@ -7,6 +7,9 @@ function input_fun(number) {
     if(str == "" &&  symbol.includes(number)){
         return
     }
+    if(number == '.' && str.includes('.')){
+        return
+    }
     if(symbol.includes(str[str.length-1]) && symbol.includes(number)){
         if(str[str.length-1] != number){
             input_box.textContent = (str.slice(0,str.length-1)+number)

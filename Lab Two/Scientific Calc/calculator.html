@@ -6,7 +6,6 @@
 <body>
     <div class="calculator-container">
         <p id="input_box" value="Hi" type="text"></p>
-        <p id="answer"></p>
         <div id="grid-container">
             <p onclick="sin_fun()" class="grid-item">sin</p>
             <p onclick="cos_fun()" class="grid-item">cos</p>
@@ -35,7 +34,16 @@
         const input_box = document.getElementById("input_box")
 
 function input_fun(number) {
+    str = input_box.textContent
+
+    if((number == '-' && str.includes('-')) || (str != "" && number == '-')){
+        return
+    }
+
     if ((input_box.textContent[0] == 0 && number == 0) || number == "00") {
+        return
+    }
+    if(number == '.' && str.includes('.')){
         return
     }
     if ((input_box.textContent == 0 && number != 0) || input_box.textContent === NaN) {
