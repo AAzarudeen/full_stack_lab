@@ -8,7 +8,8 @@ function App(){
         'Little Mount':[{dest:'Guindy',km:1},{dest:'Anna University',km:2},{dest:'Adayar',km:3},{dest:'Besant nagar',km:4},{dest:'Velachery',km:3},{dest:'Thriuvaanmayur',km:6}],
         'Anna University':[{dest:'Guindy',km:1},{dest:'Little Mount',km:2},{dest:'Adayar',km:3},{dest:'Besant nagar',km:4},{dest:'Velachery',km:3},{dest:'Thriuvaanmayur',km:6}],
         'Besant nagar':[{dest:'Guindy',km:1},{dest:'Little Mount',km:2},{dest:'Adayar',km:3},{dest:'Anna University',km:4},{dest:'Velachery',km:3},{dest:'Thriuvaanmayur',km:6}],
-        'Thriuvaanmayur':[{dest:'Guindy',km:1},{dest:'Little Mount',km:2},{dest:'Adayar',km:3},{dest:'Anna University',km:4},{dest:'Besant nagar',km:3},{dest:'Velachery',km:6}]
+        'Thriuvaanmayur':[{dest:'Guindy',km:1},{dest:'Little Mount',km:2},{dest:'Adayar',km:3},{dest:'Anna University',km:4},{dest:'Besant nagar',km:3},{dest:'Velachery',km:6}],
+        'Velachery':[{dest:'Guindy',km:1},{dest:'Little Mount',km:2},{dest:'Adayar',km:3},{dest:'Anna University',km:4},{dest:'Besant nagar',km:3},{dest:'Thriuvaanmayur',km:6}]
     }
 
     const[pickup,setPickup] = useState('')

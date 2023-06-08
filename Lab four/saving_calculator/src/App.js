@@ -10,7 +10,7 @@ function App(params) {
     const calculate = ()=>{
         var downPay = (25*property)/100
         var salaryPerMonth = salary/12
-        var savingInAmount = (salaryPerMonth*saving)/10
+        var savingInAmount = (salaryPerMonth*(saving))
         alert(Math.round(downPay/savingInAmount))
     }
 
@@ -23,7 +23,7 @@ function App(params) {
     }
 
     const changeSaving = (evt) => {
-        setSaving(evt.target.value)
+        setSaving((evt.target.value))
     }
 
     return(
