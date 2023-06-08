@@ -15,14 +15,7 @@ function Input(probs) {
             { label: 'Adayar' },
             { label: 'Besant nagar' },
             { label: 'Velachery' },
-            { label: 'Thriuvaanmayur' },
-            { label: 'Thambaram' },
-            { label: 'Anna nagar' },
-            { label: 'Ashok nagar' },
-            { label: 'Marina' },
-            { label: 'Chrompet' },
-            { label: 'Chepauk' },
-            { label: 'Mount Road' }
+            { label: 'Thriuvaanmayur' }
         ]}
 
         shouldItemRender={(item, value) => 

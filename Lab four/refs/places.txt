@@ -1,0 +1,15 @@
+{ label: 'Thambaram' },
+            { label: 'Anna nagar' },
+            { label: 'Ashok nagar' },
+            { label: 'Marina' },
+            { label: 'Chrompet' },
+            { label: 'Chepauk' },
+            { label: 'Mount Road' }
+
+
+            // 'Guindy':{dest:'Thambaram',km:23},
+        // 'Guindy':{dest:'Anna nagar',km:12},
+        // 'Guindy':{dest:'Ashok nagar',km:7},
+        // 'Guindy':{dest:'Marina',km:15},
+        // 'Guindy':{dest:'Chrompet',km:12},
+        // 'Guindy':{dest:'Chepauk',km:12},
